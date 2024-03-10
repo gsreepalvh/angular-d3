@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic'
 import 'zone.js';
+import { AppModule } from './app/app.module';
 
-@Component({
+/*@Component({
   selector: 'app-root',
   standalone: true,
   template: `
@@ -14,6 +16,15 @@ import 'zone.js';
 })
 export class App {
   name = 'Angular';
-}
+} */
+platformBrowserDynamic()
+.bootstrapModule(AppModule)
+.then((ref) => {
+  // Ensure Angular destroys itself on hot reloads.
+  
 
-bootstrapApplication(App);
+  // Otherwise, log the boot error
+})
+.catch((err) => console.error(err));
+
+//bootstrapApplication(App);

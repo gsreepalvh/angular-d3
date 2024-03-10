@@ -1,0 +1,18 @@
+.routing-example {
+    font: normal 14px sans-serif;
+    margin: 15px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 125px);
+      grid-column-gap: 10px;
+      a {
+        background-color: lightgrey;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        border-radius: 4px;
+      }
+    }
+  }
+  
